@@ -21,7 +21,7 @@ app.use(cors({
   credentials: true
 }));
 app.use(cors(corsOptions));
-// app.use(express.json());
+app.use(express.json());
 
 // ✅ Create HTTP server (no Socket.IO now)
 const server = http.createServer(app);
@@ -114,6 +114,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
