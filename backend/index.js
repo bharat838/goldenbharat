@@ -16,14 +16,11 @@ const certificateRoutes = require("./routes/certificate");
 const app = express();
 
 // ✅ Updated CORS Configuration
-aconst corsOptions = {
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:5173',
-    'https://goldenbharat.netlify.app',
-  ],
-  credentials: true,
-};
+app.use(cors({
+  origin: ["http://localhost:3000", "http://localhost:5173","https://goldenbharat.netlify.app"], // React + Vite ports
+  credentials: true
+}));
+
 
 app.use(cors(corsOptions));
 //app.use(express.json());
