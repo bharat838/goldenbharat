@@ -17,11 +17,11 @@ const app = express();
 
 // ✅ Updated CORS Configuration
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:5173"], // React + Vite ports
+  origin: ["https://goldenbharat.netlify.app", "http://localhost:5173"], // React + Vite ports
   credentials: true
 }));
-
-app.use(express.json());
+app.use(cors(corsOptions));
+// app.use(express.json());
 
 // ✅ Create HTTP server (no Socket.IO now)
 const server = http.createServer(app);
@@ -114,6 +114,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
