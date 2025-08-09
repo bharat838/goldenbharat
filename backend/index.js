@@ -22,7 +22,7 @@ app.use(cors({
 }));
 
 
-app.use(cors(corsOptions));
+app.use(cors());
 //app.use(express.json());
 
 // ✅ Create HTTP server (no Socket.IO now)
@@ -116,6 +116,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
