@@ -15,7 +15,7 @@ function Login() {
     setLoading(true);
 
     try {
-      const res = await axios.post("https://goldenbharat.netlify.app/api/auth/login", form);
+      const res = await axios.post("https://goldenbharat.railway.app/api/auth/login", form);
 
       // 🚫 If banned → stop (toast handled in AuthContext)
       if (res.data.status === "banned") {
@@ -260,4 +260,5 @@ export default Login;
 // }
 
 // export default Login;
+
 
