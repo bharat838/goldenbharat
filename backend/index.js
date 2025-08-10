@@ -17,8 +17,9 @@ const certificateRoutes = require("./routes/certificate");
 // ✅ Updated CORS Configuration
 app.use(cors({
   origin: [
-    "https://goldenbharat.railway.app",  // Railway backend URL
+   // "https://goldenbharat.railway.app",  // Railway backend URL
     "https://goldenbharat.vercel.app",   // Vercel frontend URL
+    "http://localhost:3000",  
     "http://localhost:5173",              // Local development URL for React
   ],
   credentials: true,
@@ -182,6 +183,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
