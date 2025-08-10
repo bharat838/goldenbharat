@@ -5,6 +5,15 @@ const mongoose = require("mongoose");
 const http = require("http");
 const app = express();
 
+// ✅ Routes
+const auth = require("./routes/auth");
+const planRoutes = require("./routes/planRoutes");
+const subscriptionRoutes = require("./routes/subscriptionRoutes");
+const authRoutes = require("./routes/authRoutes");
+const adminRoutes = require("./routes/admin");
+const removeExpiredSubscriptions = require("./utils/removeExpiredSubscriptions");
+const certificateRoutes = require("./routes/certificate");
+const app = express();
 // ✅ Updated CORS Configuration
 app.use(cors({
   origin: [
@@ -173,6 +182,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
