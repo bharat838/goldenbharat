@@ -13,7 +13,7 @@ const authRoutes = require("./routes/authRoutes");
 const adminRoutes = require("./routes/admin");
 const removeExpiredSubscriptions = require("./utils/removeExpiredSubscriptions");
 const certificateRoutes = require("./routes/certificate");
-const app = express();
+
 // ✅ Updated CORS Configuration
 app.use(cors({
   origin: [
@@ -21,7 +21,7 @@ app.use(cors({
     "https://goldenbharat.vercel.app",   // Vercel frontend URL
     "http://localhost:5173",              // Local development URL for React
   ],
-  credentials: true
+  credentials: true,
 }));
 
 // Body parser middleware
@@ -55,8 +55,8 @@ mongoose.connection.on("error", (err) => {
 });
 
 mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+  // useNewUrlParser: true,
+  // useUnifiedTopology: true,
 });
 
 // ✅ Start server
@@ -182,6 +182,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
