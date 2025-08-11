@@ -34,7 +34,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://goldenbharat.railway.app",
+  "proxy": "https://goldenbharat.railway.app",
   "browserslist": {
     "production": [
       ">0.2%",
