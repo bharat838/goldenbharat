@@ -12,7 +12,7 @@ const Account = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/auth/user", {
+      const res = await axios.get("http://goldenbharat.railway.app/api/auth/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(res.data);
@@ -28,7 +28,7 @@ const Account = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put("http://localhost:5000/api/auth/update", form, {
+      await axios.put("http://goldenbharat.railway.app/api/auth/update", form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("✅ Name updated");
@@ -45,7 +45,7 @@ const Account = () => {
 
     try {
       await axios.put(
-        "http://localhost:5000/api/auth/update-password",
+        "http://goldenbharat.railway.app/api/auth/update-password",
         { newPassword: newPass },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -198,7 +198,7 @@ export default Account;
 
 //   const fetchUser = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/auth/user", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/auth/user", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setUser(res.data);
@@ -210,7 +210,7 @@ export default Account;
 
 //   const handleSave = async () => {
 //     try {
-//       await axios.put("http://localhost:5000/api/auth/update", form, {
+//       await axios.put("http://goldenbharat.railway.app/api/auth/update", form, {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       alert("✅ Name updated");
@@ -228,7 +228,7 @@ export default Account;
 
 //     try {
 //       await axios.put(
-//         "http://localhost:5000/api/auth/update-password",
+//         "http://goldenbharat.railway.app/api/auth/update-password",
 //         { newPassword: newPass },
 //         {
 //           headers: { Authorization: `Bearer ${token}` },
@@ -364,7 +364,7 @@ export default Account;
 
 //   const fetchUser = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/auth/user", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/auth/user", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setUser(res.data);
@@ -380,7 +380,7 @@ export default Account;
 //   const handleSave = async () => {
 //     try {
 //       const res = await axios.put(
-//         "http://localhost:5000/api/auth/update",
+//         "http://goldenbharat.railway.app/api/auth/update",
 //         form,
 //         {
 //           headers: { Authorization: `Bearer ${token}` },
@@ -402,7 +402,7 @@ export default Account;
 
 //     try {
 //       const res = await axios.post(
-//         "http://localhost:5000/api/auth/update-password",
+//         "http://goldenbharat.railway.app/api/auth/update-password",
 //         { currentPassword,newPassword},
 //         {
 //           headers: { Authorization: `Bearer ${token}` },

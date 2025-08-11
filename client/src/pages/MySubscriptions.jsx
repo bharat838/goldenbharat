@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:5000/api/certificate";
+const API = "http://goldenbharat.railway.app/api/certificate";
 
 
 async function downloadCertificate(planId, planName, userName, startDate, expiryDate) {
@@ -27,7 +27,7 @@ async function downloadCertificate(planId, planName, userName, startDate, expiry
     const fileName = genRes.data.fileName;
 
     // 2) download certificate file as blob (usually static files don’t need auth headers)
-    const fileUrl = `http://localhost:5000/uploads/certificates/${encodeURIComponent(fileName)}`;
+    const fileUrl = `http://goldenbharat.railway.app/uploads/certificates/${encodeURIComponent(fileName)}`;
     const downloadRes = await axios.get(fileUrl, {
       responseType: "blob",
       // headers: { Authorization: `Bearer ${token}` },  // Remove if static files not protected
@@ -66,7 +66,7 @@ const MySubscriptions = () => {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await axios.get("http://localhost:5000/api/subscription", {
+      const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -95,7 +95,7 @@ const MySubscriptions = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/api/subscription/unsubscribe",
+        "http://goldenbharat.railway.app/api/subscription/unsubscribe",
         { planId },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -286,7 +286,7 @@ export default MySubscriptions;
 //       const token = localStorage.getItem("token");
 //       if (!token) return;
 
-//       const res = await axios.get("http://localhost:5000/api/subscription", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -314,7 +314,7 @@ export default MySubscriptions;
 //     try {
 //       const token = localStorage.getItem("token");
 //       await axios.post(
-//         "http://localhost:5000/api/subscription/unsubscribe",
+//         "http://goldenbharat.railway.app/api/subscription/unsubscribe",
 //         { planId },
 //         {
 //           headers: { Authorization: `Bearer ${token}` },
@@ -505,7 +505,7 @@ export default MySubscriptions;
 //       const token = localStorage.getItem("token");
 //       if (!token) return;
 
-//       const res = await axios.get("http://localhost:5000/api/subscription", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -527,7 +527,7 @@ export default MySubscriptions;
 //     try {
 //       const token = localStorage.getItem("token");
 //       await axios.post(
-//         "http://localhost:5000/api/subscription/unsubscribe",
+//         "http://goldenbharat.railway.app/api/subscription/unsubscribe",
 //         { planId },
 //         {
 //           headers: {
@@ -706,7 +706,7 @@ export default MySubscriptions;
 //       const token = localStorage.getItem("token");
 //       if (!token) return;
 
-//       const res = await axios.get("http://localhost:5000/api/subscription", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
 //         headers: {
 //           Authorization: `Bearer ${token}`,
 //         },
@@ -728,7 +728,7 @@ export default MySubscriptions;
 //     try {
 //       const token = localStorage.getItem("token");
 //       await axios.post(
-//         "http://localhost:5000/api/subscription/unsubscribe",
+//         "http://goldenbharat.railway.app/api/subscription/unsubscribe",
 //         { planId },
 //         {
 //           headers: {

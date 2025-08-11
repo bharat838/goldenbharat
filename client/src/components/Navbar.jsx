@@ -228,7 +228,7 @@ export default Navbar;
 //   useEffect(() => {
 //     if (token) {
 //       axios
-//         .get("http://localhost:5000/api/auth/user", {
+//         .get("http://goldenbharat.railway.app/api/auth/user", {
 //           headers: { Authorization: `Bearer ${token}` },
 //         })
 //         .then((res) => setUser(res.data))

@@ -2,7 +2,7 @@
 // import axios from "axios";
 // import { useNavigate } from "react-router-dom";
 
-// const API = "http://localhost:5000/api/auth";
+// const API = "http://goldenbharat.railway.app/api/auth";
 
 // export default function ForgotPassword() {
 //   const navigate = useNavigate();

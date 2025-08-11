@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "http://goldenbharat.railway.app/api",
 });
 
 // 🔹 Login API
@@ -20,7 +20,7 @@ export default API;
 // import axios from "axios";
 
 // const API = axios.create({
-//   baseURL: "http://localhost:5000/api", // ✅ Backend URL
+//   baseURL: "http://goldenbharat.railway.app/api", // ✅ Backend URL
 // });
 
 // export const login = (email, password) =>

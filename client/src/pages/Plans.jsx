@@ -13,7 +13,7 @@ const Plans = () => {
   // ✅ Fetch all plans from backend
   const fetchPlans = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/plans");
+      const res = await axios.get("http://goldenbharat.railway.app/api/plans");
       setPlans(res.data || []);
     } catch (err) {
       console.error("Failed to fetch plans:", err);
@@ -24,7 +24,7 @@ const Plans = () => {
   const fetchSubscriptions = async () => {
     if (!token) return;
     try {
-      const res = await axios.get("http://localhost:5000/api/subscription", {
+      const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -62,7 +62,7 @@ const Plans = () => {
     setSubscribing(true);
     try {
       await axios.post(
-        "http://localhost:5000/api/subscription/subscribe",
+        "http://goldenbharat.railway.app/api/subscription/subscribe",
         { planId: plan._id },
         {
           headers: {
@@ -161,7 +161,7 @@ export default Plans;
 //   // ✅ Fetch plans from backend
 //   const fetchPlans = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/plans");
+//       const res = await axios.get("http://goldenbharat.railway.app/api/plans");
 //       setPlans(res.data);
 //     } catch (err) {
 //       console.error("Failed to fetch plans:", err);
@@ -172,7 +172,7 @@ export default Plans;
 //   const fetchSubscriptions = async () => {
 //     if (!token) return;
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/subscription", {
+//       const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
 //         headers: { Authorization: `Bearer ${token}` },
 //       });
 //       setSubscriptions(res.data || []);
@@ -208,7 +208,7 @@ export default Plans;
 //     setSubscribing(true);
 //     try {
 //       await axios.post(
-//         "http://localhost:5000/api/subscription/subscribe",
+//         "http://goldenbharat.railway.app/api/subscription/subscribe",
 //         { planId: plan._id }, // ✅ Correct field
 //         { headers: { Authorization: `Bearer ${token}` } }
 //       );
@@ -311,7 +311,7 @@ export default Plans;
 
 //   const fetchPlans = async () => {
 //     try {
-//       const res = await axios.get("http://localhost:5000/api/plans");
+//       const res = await axios.get("http://goldenbharat.railway.app/api/plans");
 //       setPlans(res.data);
 //     } catch (err) {
 //       console.error("❌ Failed to fetch plans:", err);
@@ -326,7 +326,7 @@ export default Plans;
 //       setSubscribingId(planId); // ✅ Start loading for specific plan
 
 //       const res = await axios.post(
-//         "http://localhost:5000/api/subscription",
+//         "http://goldenbharat.railway.app/api/subscription",
 //         { planId },
 //         {
 //           headers: { Authorization: `Bearer ${token}` },
