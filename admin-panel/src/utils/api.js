@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://goldenbharat.railway.app/api",
+  baseURL: "https://goldenbharat.railway.app/api",
 });
 
 // 🔹 Login API
@@ -38,3 +38,4 @@ export default API;
 // });
 
 // export default API;
+
