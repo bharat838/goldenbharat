@@ -25,7 +25,7 @@ export default function Landing({ isLoggedIn }) {
    const [chartData, setChartData] = useState(null);
 
 useEffect(() => {
-  axios.get("http://goldenbharat.railway.app/api/plans/revenue-stats")
+  axios.get("https://goldenbharat.railway.app/api/plans/revenue-stats")
 
     .then(res => {
       const labels = res.data.map(p => p.title);
@@ -854,3 +854,4 @@ useEffect(() => {
 //     </div>
 //   );
 // }
+
