@@ -71,7 +71,7 @@ export const AuthProvider = ({ children }) => {
         return;
       }
 
-      const res = await axios.get("/api/auth/user", {
+      const res = await axios.get("https://goldenbharat.railway.app/api/auth/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -102,3 +102,4 @@ export const AuthProvider = ({ children }) => {
     </AuthContext.Provider>
   );
 };
+
