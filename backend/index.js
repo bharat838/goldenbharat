@@ -17,12 +17,11 @@ const certificateRoutes = require("./routes/certificate");
 // ✅ Updated CORS Configuration
 app.use(cors({
   origin: [
-   // "https://goldenbharat.railway.app",  // Railway backend URL
-    "https://goldenbharat.vercel.app",   // Vercel frontend URL
-    "http://localhost:3000",  
-    "http://localhost:5173",              // Local development URL for React
+    "https://goldenbharat.vercel.app",   // Vercel frontend URL (production)
+    "http://localhost:3000",              // Local development URL for frontend
+    "http://localhost:5173",              // Local development URL for React (Vite)
   ],
-  credentials: true,
+  credentials: true,  // Allow cookies and session data (if needed)
 }));
 
 // Body parser middleware
@@ -63,6 +62,7 @@ mongoose.connect(process.env.MONGO_URI, {
 // ✅ Start server
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 // const path = require("path");
@@ -183,6 +183,7 @@ server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
 // // ✅ Start server
 // const PORT = process.env.PORT || 5000;
 // server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
 
 
 
