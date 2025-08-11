@@ -13,7 +13,7 @@ const Plans = () => {
   // ✅ Fetch all plans from backend
   const fetchPlans = async () => {
     try {
-      const res = await axios.get("http://goldenbharat.railway.app/api/plans");
+      const res = await axios.get("https://goldenbharat.railway.app/api/plans");
       setPlans(res.data || []);
     } catch (err) {
       console.error("Failed to fetch plans:", err);
@@ -24,7 +24,7 @@ const Plans = () => {
   const fetchSubscriptions = async () => {
     if (!token) return;
     try {
-      const res = await axios.get("http://goldenbharat.railway.app/api/subscription", {
+      const res = await axios.get("https://goldenbharat.railway.app/api/subscription", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -62,7 +62,7 @@ const Plans = () => {
     setSubscribing(true);
     try {
       await axios.post(
-        "http://goldenbharat.railway.app/api/subscription/subscribe",
+        "https://goldenbharat.railway.app/api/subscription/subscribe",
         { planId: plan._id },
         {
           headers: {
@@ -386,3 +386,4 @@ export default Plans;
 // };
 
 // export default Plans;
+
