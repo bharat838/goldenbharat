@@ -12,7 +12,7 @@ const Account = () => {
 
   const fetchUser = async () => {
     try {
-      const res = await axios.get("http://goldenbharat.railway.app/api/auth/user", {
+      const res = await axios.get("https://goldenbharat.railway.app/api/auth/user", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUser(res.data);
@@ -28,7 +28,7 @@ const Account = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put("http://goldenbharat.railway.app/api/auth/update", form, {
+      await axios.put("https://goldenbharat.railway.app/api/auth/update", form, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("✅ Name updated");
@@ -45,7 +45,7 @@ const Account = () => {
 
     try {
       await axios.put(
-        "http://goldenbharat.railway.app/api/auth/update-password",
+        "https://goldenbharat.railway.app/api/auth/update-password",
         { newPassword: newPass },
         {
           headers: { Authorization: `Bearer ${token}` },
@@ -525,3 +525,4 @@ export default Account;
 // };
 
 // export default Account;
+
