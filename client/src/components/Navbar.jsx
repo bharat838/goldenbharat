@@ -15,7 +15,7 @@ const Navbar = () => {
     const fetchUser = async () => {
       if (token) {
         try {
-          const res = await axios.get("/api/auth/user", {
+          const res = await axios.get("https://goldenbharat.railway.app/api/auth/user", {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -369,3 +369,4 @@ export default Navbar;
 // };
 
 // export default Navbar;
+
